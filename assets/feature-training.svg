@@ -1,0 +1,15 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#0D2D20"/>
+  <rect x="88" y="88" width="724" height="444" rx="28" fill="#FBF6EA"/>
+  <rect x="126" y="132" width="236" height="148" rx="20" fill="#E6D4AA"/>
+  <rect x="390" y="132" width="150" height="148" rx="20" fill="#21593F"/>
+  <rect x="566" y="132" width="206" height="148" rx="20" fill="#1B4733"/>
+  <rect x="126" y="314" width="646" height="34" rx="17" fill="#EEE2C6"/>
+  <rect x="126" y="374" width="492" height="34" rx="17" fill="#D4A545"/>
+  <rect x="126" y="434" width="342" height="34" rx="17" fill="#2E7550"/>
+  <text x="146" y="188" fill="#173125" font-family="Arial, sans-serif" font-size="28" font-weight="700">Training Stats</text>
+  <text x="146" y="226" fill="#4E5F56" font-family="Arial, sans-serif" font-size="22">Sessions and progress</text>
+  <text x="420" y="210" fill="#FFF7E3" font-family="Arial, sans-serif" font-size="42" font-weight="700">84%</text>
+  <text x="604" y="188" fill="#FCE8BA" font-family="Arial, sans-serif" font-size="26" font-weight="700">Simple Mode</text>
+  <text x="604" y="224" fill="#F7F0DF" font-family="Arial, sans-serif" font-size="20">Clean, low-noise layout</text>
+</svg>

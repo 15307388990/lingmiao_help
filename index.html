@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="台球辅助软件帮助中心，支持功能说明、注意事项、常见问题、中英文切换与 GitHub Pages 部署。">
+  <title>台球辅助软件帮助中心</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Outfit:wght@500;700;800&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong data-i18n="brand.name">台球辅助软件</strong>
+          <span data-i18n="brand.sub">帮助中心 / Help Center</span>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <span class="deploy-badge" data-i18n="topbar.badge">GitHub Pages Ready</span>
+        <div class="language-switch" aria-label="Language Switch">
+          <button type="button" class="lang-button active" data-lang="zh">中文</button>
+          <button type="button" class="lang-button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Billiards Assistant Docs</p>
+        <h1 data-i18n="hero.title">让用户一眼看懂怎么用，也能迅速排查问题</h1>
+        <p class="hero-text" data-i18n="hero.text">
+          这个页面专门为 GitHub 静态部署设计，支持中英文双切、图片/GIF 展示、搜索、目录定位和 FAQ 折叠，适合做成产品官网里的帮助文档首页。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#quickstart" class="button button-primary" data-i18n="hero.primary">快速上手</a>
+          <a href="#faq" class="button button-secondary" data-i18n="hero.secondary">查看常见问题</a>
+        </div>
+
+        <div class="hero-highlights">
+          <span class="highlight-pill" data-i18n="hero.pill1">中英文切换</span>
+          <span class="highlight-pill" data-i18n="hero.pill2">支持图片 / GIF</span>
+          <span class="highlight-pill" data-i18n="hero.pill3">移动端友好</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-frame">
+          <div class="visual-head">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <figure class="media-card">
+            <div class="media-shell">
+              <img
+                class="media-asset"
+                src="assets/hero-demo.svg"
+                alt="台球辅助软件演示画面"
+                data-i18n-alt="media.hero.alt"
+                data-fallback-label="assets/hero-demo.gif"
+              >
+              <div class="media-fallback" data-i18n="media.hero.fallback">把演示 GIF 放到 assets/hero-demo.gif</div>
+            </div>
+            <figcaption data-i18n="media.hero.caption">首页大图位置，建议放软件主界面截图或 6-10 秒演示 GIF。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-bar">
+      <div class="search-header">
+        <div>
+          <p class="search-caption" data-i18n="search.caption">Quick Find</p>
+          <label for="help-search" class="search-label" data-i18n="search.label">搜索帮助内容</label>
+        </div>
+        <p class="search-tip" data-i18n="search.tip">建议优先搜索“校准 / 辅助线 / 识别 / 卡顿”</p>
+      </div>
+
+      <div class="search-input-wrap">
+        <input
+          id="help-search"
+          type="search"
+          data-i18n-placeholder="search.placeholder"
+          placeholder="输入关键词，例如：校准、辅助线、识别、卡顿"
+        >
+        <button type="button" id="clear-search" data-i18n="search.clear">清空</button>
+      </div>
+
+      <div class="tag-list">
+        <button type="button" class="tag" data-keyword-zh="校准" data-keyword-en="calibration" data-i18n="tag.calibration">校准</button>
+        <button type="button" class="tag" data-keyword-zh="辅助线" data-keyword-en="aiming" data-i18n="tag.aiming">辅助线</button>
+        <button type="button" class="tag" data-keyword-zh="识别" data-keyword-en="detection" data-i18n="tag.detection">识别</button>
+        <button type="button" class="tag" data-keyword-zh="卡顿" data-keyword-en="performance" data-i18n="tag.performance">卡顿</button>
+        <button type="button" class="tag" data-keyword-zh="权限" data-keyword-en="permission" data-i18n="tag.permission">权限</button>
+      </div>
+
+      <p id="search-status" class="search-status" data-i18n="search.statusIdle">可以按关键词筛选功能卡片和常见问题。</p>
+    </section>
+
+    <div class="content-layout">
+      <aside class="sidebar">
+        <nav class="toc" aria-label="帮助目录">
+          <p class="toc-title" data-i18n="toc.title">目录导航</p>
+          <a href="#quickstart" class="toc-link active" data-i18n="toc.quickstart">快速上手</a>
+          <a href="#features" class="toc-link" data-i18n="toc.features">功能说明</a>
+          <a href="#notices" class="toc-link" data-i18n="toc.notices">注意事项</a>
+          <a href="#faq" class="toc-link" data-i18n="toc.faq">常见问题</a>
+          <a href="#media" class="toc-link" data-i18n="toc.media">图片与 GIF</a>
+          <a href="#deploy" class="toc-link" data-i18n="toc.deploy">部署建议</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <section class="content-section" id="quickstart" data-title="快速上手">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="quickstart.kicker">Start Here</p>
+            <h2 data-i18n="quickstart.title">快速上手</h2>
+            <p class="section-intro" data-i18n="quickstart.intro">建议把新用户第一次打开软件最需要知道的步骤，固定放在页面最前面。</p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card searchable">
+              <span class="step-number">01</span>
+              <h3 data-i18n="quickstart.step1.title">先完成球桌校准</h3>
+              <p data-i18n="quickstart.step1.text">确认球桌四角、边线和当前视角，后续辅助线和落点预测才会稳定。</p>
+            </article>
+            <article class="step-card searchable">
+              <span class="step-number">02</span>
+              <h3 data-i18n="quickstart.step2.title">选择当前使用模式</h3>
+              <p data-i18n="quickstart.step2.text">练习模式适合训练，演示模式适合讲解，简洁模式适合日常快速查看。</p>
+            </article>
+            <article class="step-card searchable">
+              <span class="step-number">03</span>
+              <h3 data-i18n="quickstart.step3.title">先看路线，再看建议</h3>
+              <p data-i18n="quickstart.step3.text">推荐把瞄准路线作为第一参考，把力度和走位提示作为补充信息。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="features" data-title="功能说明">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="features.kicker">Feature Guide</p>
+            <h2 data-i18n="features.title">功能说明</h2>
+            <p class="section-intro" data-i18n="features.intro">按用户真实使用顺序组织内容，比按技术模块分类更容易找到。</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-showcase searchable">
+              <div class="showcase-copy">
+                <span class="feature-index">01</span>
+                <h3 data-i18n="features.item1.title">实时瞄准辅助</h3>
+                <p data-i18n="features.item1.text">在画面中显示推荐击球方向，帮助用户快速确认进球线路。</p>
+                <ul class="bullet-list">
+                  <li data-i18n="features.item1.b1">适合新手建立基础瞄准感觉</li>
+                  <li data-i18n="features.item1.b2">适合教学演示典型球型</li>
+                  <li data-i18n="features.item1.b3">建议配合固定机位使用</li>
+                </ul>
+              </div>
+              <figure class="media-card compact">
+                <div class="media-shell">
+                  <img
+                    class="media-asset"
+                    src="assets/feature-aiming.svg"
+                    alt="实时瞄准辅助示意图"
+                    data-i18n-alt="media.aiming.alt"
+                    data-fallback-label="assets/feature-aiming.gif"
+                  >
+                  <div class="media-fallback" data-i18n="media.aiming.fallback">把功能演示 GIF 放到 assets/feature-aiming.gif</div>
+                </div>
+                <figcaption data-i18n="media.aiming.caption">这里建议放“辅助线如何显示”的动态图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="feature-showcase searchable">
+              <div class="showcase-copy">
+                <span class="feature-index">02</span>
+                <h3 data-i18n="features.item2.title">路线预测与落点参考</h3>
+                <p data-i18n="features.item2.text">显示目标球入袋方向、母球碰撞后的大致走向，以及可能落点区域。</p>
+                <ul class="bullet-list">
+                  <li data-i18n="features.item2.b1">适合复盘和讲解走位逻辑</li>
+                  <li data-i18n="features.item2.b2">适合观察多种球路变化</li>
+                  <li data-i18n="features.item2.b3">校准误差会直接影响结果</li>
+                </ul>
+              </div>
+              <figure class="media-card compact">
+                <div class="media-shell">
+                  <img
+                    class="media-asset"
+                    src="assets/feature-calibration.svg"
+                    alt="路线预测和校准示意图"
+                    data-i18n-alt="media.calibration.alt"
+                    data-fallback-label="assets/feature-calibration.gif"
+                  >
+                  <div class="media-fallback" data-i18n="media.calibration.fallback">把校准或路线预测 GIF 放到 assets/feature-calibration.gif</div>
+                </div>
+                <figcaption data-i18n="media.calibration.caption">这里建议放“校准界面”或“走位预测”的截图。</figcaption>
+              </figure>
+            </article>
+
+            <article class="feature-showcase searchable">
+              <div class="showcase-copy">
+                <span class="feature-index">03</span>
+                <h3 data-i18n="features.item3.title">训练记录与简洁模式</h3>
+                <p data-i18n="features.item3.text">支持记录练习结果，并在熟悉后切换到更简洁的显示界面，减少干扰。</p>
+                <ul class="bullet-list">
+                  <li data-i18n="features.item3.b1">训练记录适合长期练习用户</li>
+                  <li data-i18n="features.item3.b2">简洁模式适合小屏幕和快速查看</li>
+                  <li data-i18n="features.item3.b3">建议把进阶功能放到页面靠后位置</li>
+                </ul>
+              </div>
+              <figure class="media-card compact">
+                <div class="media-shell">
+                  <img
+                    class="media-asset"
+                    src="assets/feature-training.svg"
+                    alt="训练记录和简洁模式示意图"
+                    data-i18n-alt="media.training.alt"
+                    data-fallback-label="assets/feature-training.gif"
+                  >
+                  <div class="media-fallback" data-i18n="media.training.fallback">把训练记录截图放到 assets/feature-training.gif</div>
+                </div>
+                <figcaption data-i18n="media.training.caption">这里建议放“训练统计”或“简洁界面”截图。</figcaption>
+              </figure>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="notices" data-title="注意事项">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="notices.kicker">Important Notes</p>
+            <h2 data-i18n="notices.title">注意事项</h2>
+            <p class="section-intro" data-i18n="notices.intro">这一部分最好单独强调，因为大部分“为什么不准”都能在这里提前解决。</p>
+          </div>
+
+          <div class="notice-hero searchable">
+            <div class="notice-hero-copy">
+              <p class="notice-label" data-i18n="notices.hero.label">最重要的提醒</p>
+              <h3 data-i18n="notices.hero.title">校准、光线、机位固定，这三项决定了辅助结果是否稳定。</h3>
+              <p data-i18n="notices.hero.text">如果用户反馈识别偏差、辅助线不准、落点异常，优先检查这三项，通常比改参数更有效。</p>
+            </div>
+          </div>
+
+          <div class="notice-list">
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item1.title">使用前先校准</h3>
+              <p data-i18n="notices.item1.text">只要球桌位置、镜头角度或设备摆放方式发生变化，就建议重新校准一次。</p>
+            </article>
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item2.title">保持光线稳定</h3>
+              <p data-i18n="notices.item2.text">过暗、过曝、强反光或有人影遮挡时，都可能影响球体和袋口识别效果。</p>
+            </article>
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item3.title">设备尽量固定</h3>
+              <p data-i18n="notices.item3.text">建议使用支架或固定机位，避免画面抖动和视角位移造成结果偏差。</p>
+            </article>
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item4.title">参考结果不是绝对结果</h3>
+              <p data-i18n="notices.item4.text">线路、力度和走位属于辅助参考，真实效果还会受到杆法、球速、台呢和个人手感影响。</p>
+            </article>
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item5.title">遵守场地规则</h3>
+              <p data-i18n="notices.item5.text">如果比赛、场馆或教学环境对辅助工具有限制，请以现场规则为准。</p>
+            </article>
+            <article class="notice-card searchable">
+              <h3 data-i18n="notices.item6.title">确保权限开启</h3>
+              <p data-i18n="notices.item6.text">摄像头和存储权限未开启时，可能出现无法识别、无法截图或无法保存记录的问题。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="faq" data-title="常见问题">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="faq.kicker">Frequently Asked Questions</p>
+            <h2 data-i18n="faq.title">常见问题</h2>
+            <p class="section-intro" data-i18n="faq.intro">把用户最容易搜的词写进问题标题里，搜索体验会明显更好。</p>
+          </div>
+
+          <div class="faq-group">
+            <details class="faq-item searchable" open>
+              <summary data-i18n="faq.item1.q">为什么我看不到辅助线？</summary>
+              <p data-i18n="faq.item1.a">先检查是否完成球桌校准，再确认摄像头权限是否开启。如果当前模式设置为隐藏辅助，也会导致辅助线不显示。</p>
+            </details>
+            <details class="faq-item searchable">
+              <summary data-i18n="faq.item2.q">为什么预测线路偏差很大？</summary>
+              <p data-i18n="faq.item2.a">最常见原因是校准不准确、设备角度变化或光线不稳定。建议重新校准，并保持摄像头位置固定后再测试。</p>
+            </details>
+            <details class="faq-item searchable">
+              <summary data-i18n="faq.item3.q">为什么识别不到球或者袋口？</summary>
+              <p data-i18n="faq.item3.a">请检查画面是否过暗、是否有强反光、球桌边缘是否完整进入画面。必要时可以拉远机位，确保桌面区域完整可见。</p>
+            </details>
+            <details class="faq-item searchable">
+              <summary data-i18n="faq.item4.q">力度建议是不是必须完全照做？</summary>
+              <p data-i18n="faq.item4.a">不是。力度建议更适合帮助用户建立感觉，不同球桌、台呢速度和个人发力方式都会让结果发生变化，建议结合实际击打调整。</p>
+            </details>
+            <details class="faq-item searchable">
+              <summary data-i18n="faq.item5.q">软件卡顿怎么办？</summary>
+              <p data-i18n="faq.item5.a">可以先关闭其他后台应用，降低同时显示的辅助内容，或者切换到简洁显示模式。旧设备建议优先使用基础功能。</p>
+            </details>
+            <details class="faq-item searchable">
+              <summary data-i18n="faq.item6.q">每次都要重新校准吗？</summary>
+              <p data-i18n="faq.item6.a">如果设备位置、角度和球桌环境没有变化，一般不需要每次都重新校准。但只要有明显移动，建议重新执行一次。</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="content-section" id="media" data-title="图片与 GIF">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="media.kicker">Visual Content</p>
+            <h2 data-i18n="media.title">图片与 GIF 建议放法</h2>
+            <p class="section-intro" data-i18n="media.intro">你后续把素材传到 GitHub 时，直接替换 `assets/` 里的对应文件名就可以。</p>
+          </div>
+
+          <div class="media-guide-grid">
+            <article class="media-guide-card searchable">
+              <h3 data-i18n="media.card1.title">首页主图</h3>
+              <p data-i18n="media.card1.text">建议使用 16:10 或 16:9 的软件演示图，或者一段 6-10 秒循环 GIF，放在 `assets/hero-demo.gif`。</p>
+            </article>
+            <article class="media-guide-card searchable">
+              <h3 data-i18n="media.card2.title">功能说明配图</h3>
+              <p data-i18n="media.card2.text">每个核心功能建议至少配 1 张图，优先展示“开关前后”“辅助线效果”“校准界面”。</p>
+            </article>
+            <article class="media-guide-card searchable">
+              <h3 data-i18n="media.card3.title">FAQ 问题截图</h3>
+              <p data-i18n="media.card3.text">如果有典型报错、识别失败画面、权限弹窗，建议在 FAQ 下方加一张说明图，用户会更容易自助排查。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section support-box" id="deploy" data-title="部署建议">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="deploy.kicker">Deploy Tips</p>
+            <h2 data-i18n="deploy.title">放到 GitHub 上时的建议方案</h2>
+          </div>
+
+          <div class="support-grid">
+            <article class="support-card">
+              <h3 data-i18n="deploy.card1.title">目录结构尽量简单</h3>
+              <p data-i18n="deploy.card1.text">保持 `index.html`、`styles.css`、`script.js` 和 `assets/` 在同一层级，最适合 GitHub Pages 直接部署。</p>
+            </article>
+            <article class="support-card">
+              <h3 data-i18n="deploy.card2.title">图片统一放 assets</h3>
+              <p data-i18n="deploy.card2.text">后续新增 JPG、PNG、WEBP 或 GIF 时，统一放进 `assets/`，页面路径管理会更清楚。</p>
+            </article>
+            <article class="support-card">
+              <h3 data-i18n="deploy.card3.title">帮助页继续扩展</h3>
+              <p data-i18n="deploy.card3.text">下一步可以继续加“更新日志”“下载说明”“联系我们”“版本差异”这几个模块。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

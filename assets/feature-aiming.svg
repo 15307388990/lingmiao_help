@@ -1,0 +1,11 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#0D2D20"/>
+  <rect x="54" y="56" width="792" height="508" rx="24" fill="#1D6143" stroke="#D9AE55" stroke-width="8"/>
+  <circle cx="234" cy="332" r="22" fill="white"/>
+  <circle cx="578" cy="244" r="22" fill="#F4C65C"/>
+  <path d="M258 332C332 312 424 282 552 246" stroke="#FFF6D6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M602 244C676 232 734 194 800 138" stroke="#FFD56B" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 14"/>
+  <circle cx="796" cy="138" r="18" fill="#0B2419"/>
+  <rect x="88" y="88" width="220" height="92" rx="20" fill="#0A2118" fill-opacity="0.66"/>
+  <text x="122" y="142" fill="#FCE8BA" font-family="Arial, sans-serif" font-size="28" font-weight="700">Aiming Guide</text>
+</svg>
