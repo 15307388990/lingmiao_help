@@ -48,162 +48,142 @@ const translations = {
     quickstart: {
       kicker: "Start Here",
       title: "快速上手",
-      intro: "建议把新用户第一次打开软件最需要知道的步骤，固定放在页面最前面。",
+      intro: "按“先开游戏、再开辅助、选择进入方式、完成授权、最后对齐桌布”的顺序操作，新用户会更容易一次设置成功。",
+      step0: {
+        title: "先开启游戏并放到后台",
+        text: "请先打开游戏，并将游戏保持在后台运行状态，然后再返回启动辅助。这样后续授权与画面识别会更稳定，也更不容易选错应用。"
+      },
       step1: {
-        title: "先完成球桌校准",
-        text: "确认球桌四角、边线和当前视角，后续辅助线和落点预测才会稳定。"
+        title: "按游戏方向选择进入方式",
+        text: "根据游戏当前是横屏还是竖屏，选择对应的“横版进入”或“竖版进入”，避免进入后界面方向不匹配。",
+        alt: "横版进入和竖版进入界面示意",
+        caption: "根据游戏当前方向，选择对应的进入方式。"
       },
       step2: {
-        title: "选择当前使用模式",
-        text: "练习模式适合训练，演示模式适合讲解，简洁模式适合日常快速查看。"
+        title: "开启悬浮窗与录屏授权",
+        text: "启动悬浮窗前，请先授予悬浮窗权限。开始录制时，如果系统提供“单个应用”授权选项，建议优先选择单个应用，减少无关画面被录入。",
+        alt: "录屏单个应用授权界面示意",
+        caption: "出现录屏授权时，建议优先选择单个应用授权。"
       },
       step3: {
-        title: "先看路线，再看建议",
-        text: "推荐把瞄准路线作为第一参考，把力度和走位提示作为补充信息。"
+        title: "进入游戏后完成桌布对齐",
+        text: "进入游戏后先进行桌布对齐。对齐时请以球桌内侧边框为准，确认位置无误后再点击“保存”，这样后续辅助线会更稳定。",
+        alt: "桌布对齐与保存界面示意",
+        caption: "对齐时请以球桌内侧为准，完成后点击保存。"
       }
     },
     features: {
       kicker: "Feature Guide",
       title: "功能说明",
-      intro: "按用户真实使用顺序组织内容，比按技术模块分类更容易找到。",
+      intro: "这一部分按工具栏按钮的实际使用顺序来讲解，用户可以边看说明边对照配图快速理解各项功能。",
       item1: {
-        title: "实时瞄准辅助",
-        text: "在画面中显示推荐击球方向，帮助用户快速确认进球线路。",
-        b1: "适合新手建立基础瞄准感觉",
-        b2: "适合教学演示典型球型",
-        b3: "建议配合固定机位使用"
+        title: "工具栏移动标",
+        text: "点击后可展开或收起工具栏菜单；长按后可拖动工具栏位置，方便根据自己的操作习惯调整到合适区域。",
+        b1: "点击可展开或收起工具栏",
+        b2: "长按可拖动工具栏位置",
+        b3: "适合根据手势习惯调整到顺手区域"
       },
       item2: {
-        title: "路线预测与落点参考",
-        text: "显示目标球入袋方向、母球碰撞后的大致走向，以及可能落点区域。",
-        b1: "适合复盘和讲解走位逻辑",
-        b2: "适合观察多种球路变化",
-        b3: "校准误差会直接影响结果"
+        title: "辅助线隐藏标",
+        text: "用于控制辅助线的显示状态，点击后可快速开启或关闭辅助线显示，方便在查看线路和观察原始画面之间灵活切换。",
+        b1: "可快速关闭或开启辅助线",
+        b2: "方便查看原始击球画面",
+        b3: "适合在练习和观察之间快速切换"
       },
       item3: {
-        title: "训练记录与简洁模式",
-        text: "支持记录练习结果，并在熟悉后切换到更简洁的显示界面，减少干扰。",
-        b1: "训练记录适合长期练习用户",
-        b2: "简洁模式适合小屏幕和快速查看",
-        b3: "建议把进阶功能放到页面靠后位置"
+        title: "辅助线模式切换",
+        text: "点击后可在三种辅助线模式之间循环切换，适用于不同的击球判断场景。",
+        b1: "蛛网模式：会向 6 个袋口分别生成直线进袋参考线路，方便快速观察整体可进球方向。",
+        b2: "手动翻袋模式：红标移动后会自动吸附到目标球球心，蓝标用于调整辅助线的翻袋方向。",
+        b3: "直线模式：会根据当前目标球位置和出杆角度智能推荐线路，并提供直线与一库翻袋线路供选择；其中一库翻袋线路会受到设置中反射方案的影响。"
+      },
+      item4: {
+        title: "通用设置",
+        text: "用于调整桌布方案、反射逻辑和辅助线显示效果，是最常用的综合设置面板。",
+        b1: "支持保存 3 套桌布方案，方便不同游戏快速切换",
+        b2: "一般建议选择镜像反射，也可按需要调整反射补偿比例",
+        b3: "可设置辅助线颜色、粗细、蚂蚁线样式，并支持开启调试模式或退出应用"
+      },
+      item5: {
+        title: "图像识别设置",
+        text: "用于切换不同游戏对应的识别方案，并调节 P1、P2 阈值，优化识别准确度。",
+        b1: "内置“零一”到“零八”8 套识别参数；如果不清楚某款游戏适合使用哪一套参数，可以咨询作者",
+        b2: "默认推荐参数为 P1:80、P2:30",
+        b3: "如果出现漏球情况，可以尝试适当降低 P2 数值"
+      },
+      item6: {
+        title: "画布设置调试",
+        text: "点击该按钮后，可以重新唤起当前桌布的显示界面，方便再次检查和调整当前桌布配置。",
+        b1: "可重新显示当前桌布调试界面",
+        b2: "适合更换机位或重新检查桌布边界时使用",
+        b3: "调整完成后建议再次确认并保存"
+      },
+      media: {
+        toolbar: {
+          alt: "工具栏功能说明截图",
+          caption: "工具栏各按钮位置说明。"
+        },
+        general: {
+          alt: "通用设置界面截图",
+          caption: "通用设置界面示意，包括桌布、反射方案、颜色和调试开关。"
+        },
+        recognition: {
+          alt: "图像识别设置界面截图",
+          caption: "图像识别方案与 P1、P2 阈值设置示意。"
+        }
       }
     },
     notices: {
-      kicker: "Important Notes",
       title: "注意事项",
-      intro: "这一部分最好单独强调，因为大部分“为什么不准”都能在这里提前解决。",
-      hero: {
-        label: "最重要的提醒",
-        title: "校准、光线、机位固定，这三项决定了辅助结果是否稳定。",
-        text: "如果用户反馈识别偏差、辅助线不准、落点异常，优先检查这三项，通常比改参数更有效。"
-      },
       item1: {
-        title: "使用前先校准",
-        text: "只要球桌位置、镜头角度或设备摆放方式发生变化，就建议重新校准一次。"
+        title: "温馨提示",
+        p1: "本辅助线更像是一把用于判断线路的“尺子”。",
+        p2: "只要你选择的进袋方向正确，工具提供的参考路径通常就是可靠的；而一杆是否能够真正打进，则还取决于你对力度、时机和杆法的控制。",
+        p3: "也就是说，工具负责帮助你确认方向，而真正决定击球质量的，仍然是你的手感与实战经验。",
+        p4: "建议把辅助线作为线路参考，而不是完全替代自己的判断。尤其是高难度翻袋球，更需要结合实际练习不断调整和熟悉。多练习，才能真正把方向、力度和杆法结合起来。"
       },
       item2: {
-        title: "保持光线稳定",
-        text: "过暗、过曝、强反光或有人影遮挡时，都可能影响球体和袋口识别效果。"
-      },
-      item3: {
-        title: "设备尽量固定",
-        text: "建议使用支架或固定机位，避免画面抖动和视角位移造成结果偏差。"
-      },
-      item4: {
-        title: "参考结果不是绝对结果",
-        text: "线路、力度和走位属于辅助参考，真实效果还会受到杆法、球速、台呢和个人手感影响。"
-      },
-      item5: {
-        title: "遵守场地规则",
-        text: "如果比赛、场馆或教学环境对辅助工具有限制，请以现场规则为准。"
-      },
-      item6: {
-        title: "确保权限开启",
-        text: "摄像头和存储权限未开启时，可能出现无法识别、无法截图或无法保存记录的问题。"
+        title: "温馨提示",
+        p1: "产品性质说明：本产品为基于纯图像识别技术实现的通用辅助线工具，不属于外挂程序，不修改游戏数据、不侵入游戏进程，也不针对任何单一游戏进行定制开发，主要用于台球线路参考与练习辅助。",
+        p2: "平台规则提醒：部分游戏平台，例如天天台球等，可能明确禁止使用辅助线工具。为保障账号安全，请勿在此类平台使用，并建议在使用前先充分了解并遵守对应游戏平台的相关规则。",
+        p3: "使用建议：为提高使用过程中的安全性，建议适当隐藏工具界面，并尽量避免向游戏平台授予“获取应用列表”等非必要隐私权限。",
+        p4: "责任声明：如因个人原因违反游戏平台规则，或因使用方式不当导致账号受限、封号等问题，不属于本产品责任范围，也不在退款保障范围内。"
       }
     },
     faq: {
-      kicker: "Frequently Asked Questions",
       title: "常见问题",
-      intro: "把用户最容易搜的词写进问题标题里，搜索体验会明显更好。",
       item1: {
-        q: "为什么我看不到辅助线？",
-        a: "先检查是否完成球桌校准，再确认摄像头权限是否开启。如果当前模式设置为隐藏辅助，也会导致辅助线不显示。"
+        q: "为什么桌布无法保存？",
+        p1: "这种情况通常是因为进入方式选择错误。",
+        p2: "竖屏游戏误选了“横版进入”，或者横屏游戏误选了“竖版进入”，都会导致桌布无法正常保存。",
+        p3: "建议先确认当前游戏的实际方向，再重新选择对应的进入方式后重新操作。"
       },
       item2: {
-        q: "为什么预测线路偏差很大？",
-        a: "最常见原因是校准不准确、设备角度变化或光线不稳定。建议重新校准，并保持摄像头位置固定后再测试。"
+        q: "为什么我看不到辅助线？",
+        p1: "这种情况通常由以下几种原因导致：",
+        p2: "1. 录屏授权时选错了应用。如果系统要求选择“单个应用”，必须选择当前正在运行的游戏，而不是其他界面。建议先打开游戏，再启动辅助；如果之前选错了，退出后重新授权即可。",
+        p3: "2. 在辅助运行过程中又开启了手机自带录屏。很多手机自带录屏会占用画面采集权限，导致辅助无法继续识别画面，因此无法正常绘制辅助线。建议退出后重新授权，再重新启动辅助。",
+        p4: "3. 图像识别参数选择不正确。不同游戏可能对应不同的识别方案，如果参数不匹配，就可能导致无法正确识别桌面和球体。如果不确定某款游戏对应哪套参数，可以咨询作者。",
+        p5: "4. 微信小程序在 Android 16 系统下的兼容问题。如果你使用的是微信小程序，并且手机系统为 Android 16，可能还需要关闭“共享防护”，否则也会影响正常识别和画线。"
       },
       item3: {
-        q: "为什么识别不到球或者袋口？",
-        a: "请检查画面是否过暗、是否有强反光、球桌边缘是否完整进入画面。必要时可以拉远机位，确保桌面区域完整可见。"
+        q: "为什么翻袋不准？",
+        p1: "首先请确认当前选择的翻袋方案是否正确。",
+        p2: "需要注意的是，翻袋线路只能作为辅助参考，不能完全替代实战判断，真正决定效果的仍然是实战经验，包括加塞、力度和出杆控制。",
+        p3: "另外，有些游戏的物理引擎较为细致，反射结果不只取决于入射角，还会受到白球分离角的影响。",
+        p4: "这种情况下，需要根据实时角度、力度和塞位灵活调整，不能完全照着辅助线机械执行。"
       },
       item4: {
-        q: "力度建议是不是必须完全照做？",
-        a: "不是。力度建议更适合帮助用户建立感觉，不同球桌、台呢速度和个人发力方式都会让结果发生变化，建议结合实际击打调整。"
+        q: "为什么开着开着辅助会闪退？",
+        p1: "这种情况大多数是因为手机性能较低，同时后台运行的应用过多，导致系统负载过高，进而自动清理后台进程，造成辅助闪退。",
+        p2: "建议清理手机内存，关闭不必要的后台应用，并在系统耗电管理或电池设置中，将该软件设置为“无限制”或“不受限制”。"
       },
       item5: {
-        q: "软件卡顿怎么办？",
-        a: "可以先关闭其他后台应用，降低同时显示的辅助内容，或者切换到简洁显示模式。旧设备建议优先使用基础功能。"
-      },
-      item6: {
-        q: "每次都要重新校准吗？",
-        a: "如果设备位置、角度和球桌环境没有变化，一般不需要每次都重新校准。但只要有明显移动，建议重新执行一次。"
+        q: "为什么辅助线会闪烁或抖动？",
+        p1: "这种情况通常是因为手机 CPU 性能不足，导致画面识别和实时绘线不够稳定。",
+        p2: "建议尽量使用性能更好的设备，优先选择 Android 15 及以上系统机型，同时尽量减少后台运行应用，给辅助功能留出更多性能空间。"
       }
     },
-    media: {
-      kicker: "Visual Content",
-      title: "图片与 GIF 建议放法",
-      intro: "你后续把素材传到 GitHub 时，直接替换 assets/ 里的对应文件名就可以。",
-      hero: {
-        alt: "台球辅助软件演示画面",
-        fallback: "把演示 GIF 放到 assets/hero-demo.gif",
-        caption: "首页大图位置，建议放软件主界面截图或 6-10 秒演示 GIF。"
-      },
-      aiming: {
-        alt: "实时瞄准辅助示意图",
-        fallback: "把功能演示 GIF 放到 assets/feature-aiming.gif",
-        caption: "这里建议放“辅助线如何显示”的动态图。"
-      },
-      calibration: {
-        alt: "路线预测和校准示意图",
-        fallback: "把校准或路线预测 GIF 放到 assets/feature-calibration.gif",
-        caption: "这里建议放“校准界面”或“走位预测”的截图。"
-      },
-      training: {
-        alt: "训练记录和简洁模式示意图",
-        fallback: "把训练记录截图放到 assets/feature-training.gif",
-        caption: "这里建议放“训练统计”或“简洁界面”截图。"
-      },
-      card1: {
-        title: "首页主图",
-        text: "建议使用 16:10 或 16:9 的软件演示图，或者一段 6-10 秒循环 GIF，放在 assets/hero-demo.gif。"
-      },
-      card2: {
-        title: "功能说明配图",
-        text: "每个核心功能建议至少配 1 张图，优先展示“开关前后”“辅助线效果”“校准界面”。"
-      },
-      card3: {
-        title: "FAQ 问题截图",
-        text: "如果有典型报错、识别失败画面、权限弹窗，建议在 FAQ 下方加一张说明图，用户会更容易自助排查。"
-      }
-    },
-    deploy: {
-      kicker: "Deploy Tips",
-      title: "放到 GitHub 上时的建议方案",
-      card1: {
-        title: "目录结构尽量简单",
-        text: "保持 index.html、styles.css、script.js 和 assets/ 在同一层级，最适合 GitHub Pages 直接部署。"
-      },
-      card2: {
-        title: "图片统一放 assets",
-        text: "后续新增 JPG、PNG、WEBP 或 GIF 时，统一放进 assets/，页面路径管理会更清楚。"
-      },
-      card3: {
-        title: "帮助页继续扩展",
-        text: "下一步可以继续加“更新日志”“下载说明”“联系我们”“版本差异”这几个模块。"
-      }
-    }
   },
   en: {
     htmlLang: "en",
@@ -254,160 +234,140 @@ const translations = {
     quickstart: {
       kicker: "Start Here",
       title: "Quick Start",
-      intro: "Keep the most important first-run instructions at the top so new users do not need to scan the whole page.",
+      intro: "Follow the order of launching the game first, then opening the assistant, choosing the entry mode, granting permissions, and finally aligning the table cloth for a smoother first-time setup.",
+      step0: {
+        title: "Launch the game first and leave it in the background",
+        text: "Open the game first and keep it running in the background before starting the assistant. This makes the later authorization and screen recognition process more stable and reduces the chance of choosing the wrong app."
+      },
       step1: {
-        title: "Complete table calibration first",
-        text: "Confirm the table corners, rails, and camera perspective so the guide line and landing prediction stay accurate."
+        title: "Choose the entry mode based on screen orientation",
+        text: "Select the matching landscape or portrait entry option based on the game's current orientation so the overlay layout stays aligned.",
+        alt: "Landscape and portrait entry screen",
+        caption: "Choose the matching entry mode for the current game orientation."
       },
       step2: {
-        title: "Choose the current usage mode",
-        text: "Practice mode is for training, demo mode is for explaining shots, and simple mode is for quick daily use."
+        title: "Enable floating window and screen capture permissions",
+        text: "Before launching the floating window, grant overlay permission first. When screen recording starts, choose the single-app authorization option if the system provides it so unrelated content is not captured.",
+        alt: "Single-app screen recording authorization dialog",
+        caption: "When prompted, single-app authorization is the recommended choice."
       },
       step3: {
-        title: "Read the line before the suggestion",
-        text: "Use the aiming path as the primary reference and treat power or cue-ball hints as secondary guidance."
+        title: "Align the table cloth after entering the game",
+        text: "After entering the game, align the table cloth first. Use the inner edge of the pool table as the reference and tap Save only after the position looks correct.",
+        alt: "Table alignment and save screen",
+        caption: "Use the inner edge of the table as the alignment reference, then tap Save."
       }
     },
     features: {
       kicker: "Feature Guide",
       title: "Features",
-      intro: "Organizing by user flow is usually easier to scan than organizing by internal technical modules.",
+      intro: "This section follows the actual order of the toolbar buttons so users can read the description while comparing it with the screenshots.",
       item1: {
-        title: "Real-time aiming assistance",
-        text: "Displays the recommended shot direction on screen so users can quickly understand the basic potting line.",
-        b1: "Great for beginners building aiming intuition",
-        b2: "Useful for coaching and shot explanation",
-        b3: "Works best with a fixed camera angle"
+        title: "Toolbar move icon",
+        text: "Tap to expand or collapse the toolbar menu. Press and hold to drag the toolbar so it stays in a more comfortable position.",
+        b1: "Tap to expand or collapse the toolbar",
+        b2: "Long press to drag the toolbar",
+        b3: "Useful for adjusting the toolbar to your preferred hand position"
       },
       item2: {
-        title: "Path prediction and landing reference",
-        text: "Shows the target ball route, the cue-ball travel after contact, and an estimated landing region.",
-        b1: "Useful for replay and position-play teaching",
-        b2: "Helps compare different route options",
-        b3: "Calibration accuracy directly affects the result"
+        title: "Guide line visibility icon",
+        text: "Controls whether the guide line is shown. Tap to quickly hide or show the line when switching between assisted view and the original game screen.",
+        b1: "Quickly hides or shows the guide line",
+        b2: "Makes it easier to inspect the original game screen",
+        b3: "Useful for switching between observation and assisted aiming"
       },
       item3: {
-        title: "Training records and simple mode",
-        text: "Track practice results and switch to a cleaner interface once users are familiar with the software.",
-        b1: "Training logs help long-term users improve",
-        b2: "Simple mode fits small screens and quick checks",
-        b3: "Advanced features should appear later on the page"
+        title: "Guide line mode switch",
+        text: "Tap to cycle through three guide line modes, each suited to a different type of shot judgment.",
+        b1: "Spider mode: generates a straight reference line toward all 6 pockets so users can quickly inspect overall potting options.",
+        b2: "Manual bank mode: the red marker snaps to the target ball center, while the blue marker is used to adjust the bank direction.",
+        b3: "Straight mode: recommends routes based on the current target ball position and cue angle, including direct and one-cushion bank options; the one-cushion route is affected by the selected reflection mode in settings."
+      },
+      item4: {
+        title: "General settings",
+        text: "This panel controls cloth presets, reflection behavior, and the appearance of the guide line. It is the most frequently used settings panel.",
+        b1: "Supports up to 3 saved cloth presets for quick switching between games",
+        b2: "Mirror reflection is usually recommended, but reflection compensation can be tuned when needed",
+        b3: "Lets users adjust guide line color, thickness, ant-line style, debug mode, or exit the app"
+      },
+      item5: {
+        title: "Image recognition settings",
+        text: "Used to switch recognition presets for different games and fine-tune the P1 and P2 thresholds for better detection accuracy.",
+        b1: "Includes 8 built-in recognition presets from 01 to 08. If you are unsure which preset a specific game should use, contact the author for guidance",
+        b2: "The default recommended values are P1:80 and P2:30",
+        b3: "If balls are missed during detection, try lowering the P2 value slightly"
+      },
+      item6: {
+        title: "Canvas settings debug",
+        text: "Tap this button to bring up the current cloth display again so the user can recheck and adjust the current cloth configuration.",
+        b1: "Reopens the current cloth debug view",
+        b2: "Useful after moving the device or rechecking the table boundary",
+        b3: "After adjustments, confirm and save again"
+      },
+      media: {
+        toolbar: {
+          alt: "Toolbar function reference screenshot",
+          caption: "Toolbar button positions and labels."
+        },
+        general: {
+          alt: "General settings panel screenshot",
+          caption: "General settings example, including cloth presets, reflection mode, colors, and debug controls."
+        },
+        recognition: {
+          alt: "Image recognition settings panel screenshot",
+          caption: "Image recognition preset selection and P1/P2 threshold controls."
+        }
       }
     },
     notices: {
-      kicker: "Important Notes",
       title: "Important Notes",
-      intro: "This section deserves strong emphasis because most accuracy complaints can be prevented here.",
-      hero: {
-        label: "Top Reminder",
-        title: "Calibration, lighting, and camera stability determine whether the guidance feels reliable.",
-        text: "When users report recognition drift or inaccurate lines, check these three first before changing any parameters."
-      },
       item1: {
-        title: "Calibrate before use",
-        text: "If the table position, camera angle, or device placement changes, recalibrate before using the guide again."
+        title: "Friendly Reminder",
+        p1: "This guide line tool is best understood as a ruler for judging direction.",
+        p2: "As long as the chosen pocketing direction is correct, the reference path it provides is generally reliable. Whether the ball actually drops, however, still depends on your control of power, timing, and cue technique.",
+        p3: "In other words, the tool helps confirm direction, while the final shot quality still depends on your touch and real gameplay experience.",
+        p4: "Use the guide line as a reference rather than a full replacement for your own judgment. This is especially important for difficult bank shots, which require repeated practice and adjustment. The best results come from combining direction, power, and cue control through real training."
       },
       item2: {
-        title: "Keep lighting stable",
-        text: "Low light, overexposure, glare, or shadows can all hurt ball and pocket recognition."
-      },
-      item3: {
-        title: "Keep the device steady",
-        text: "A tripod or fixed mount helps prevent view shifts and improves consistency."
-      },
-      item4: {
-        title: "Suggestions are references, not guarantees",
-        text: "Line, power, and route suggestions are guidance only. Real outcomes still depend on stroke, cloth speed, and player feel."
-      },
-      item5: {
-        title: "Respect venue rules",
-        text: "If a match, venue, or teaching environment restricts assistive tools, follow the local rules."
-      },
-      item6: {
-        title: "Make sure permissions are enabled",
-        text: "Without camera or storage permissions, the app may fail to detect the table or save screenshots and records."
+        title: "Friendly Reminder",
+        p1: "Product nature: this product is a general-purpose guide line tool based purely on image recognition. It is not a cheat tool, does not modify game data, does not inject into game processes, and is not built for any single game. Its main purpose is route reference and practice support for billiards.",
+        p2: "Platform rules: some game platforms, such as Tiantian Billiards, may strictly forbid assistive tools. To protect account safety, do not use this product on such platforms, and make sure you fully understand and follow the relevant platform rules before use.",
+        p3: "Usage suggestion: for better safety during use, it is recommended to hide the tool interface when appropriate and avoid granting unnecessary privacy permissions such as access to the app list.",
+        p4: "Liability statement: if an account is restricted or banned because the user violated platform rules or used the product improperly, it is not covered by this product's responsibility or refund policy."
       }
     },
     faq: {
-      kicker: "Frequently Asked Questions",
       title: "FAQ",
-      intro: "Put the words users actually search for directly into the question title to improve findability.",
       item1: {
-        q: "Why can't I see the aiming line?",
-        a: "Check whether table calibration is complete and whether camera permission is enabled. Hidden overlay mode can also make the guide line disappear."
+        q: "Why can't the table cloth be saved?",
+        p1: "This usually happens because the wrong entry mode was selected.",
+        p2: "If a portrait game is opened with landscape entry, or a landscape game is opened with portrait entry, the cloth may fail to save.",
+        p3: "Check the actual game orientation and choose the matching entry option before trying again."
       },
       item2: {
-        q: "Why is the predicted path far off?",
-        a: "The most common causes are inaccurate calibration, camera movement, or unstable lighting. Recalibrate and keep the device fixed before testing again."
+        q: "Why can't I see the guide line?",
+        p1: "This issue is usually caused by one of the following reasons:",
+        p2: "1. The wrong app was selected during screen-capture authorization. If the system asks you to choose a single app, make sure you select the current game, not another screen. Open the game first, then launch the assistant; if the wrong app was selected earlier, exit and authorize again.",
+        p3: "2. The phone's built-in screen recorder was started while the assistant was already running. On many phones, the built-in recorder takes over screen capture, which prevents the assistant from recognizing the screen and drawing the guide line. Exit and authorize again before restarting the assistant.",
+        p4: "3. The image recognition preset is incorrect. Different games may require different presets, and a mismatch can prevent correct table or ball recognition. If you are unsure which preset a specific game needs, contact the author.",
+        p5: "4. WeChat mini-program compatibility on Android 16. If you are using a WeChat mini-program on Android 16, you may also need to disable sharing protection, otherwise recognition and guide-line rendering may still fail."
       },
       item3: {
-        q: "Why can't the app detect balls or pockets?",
-        a: "Check for dim light, strong glare, or an incomplete table view. Pull the camera back if needed so the full table area stays visible."
+        q: "Why is bank shot guidance inaccurate?",
+        p1: "First confirm that the correct bank reflection mode is selected.",
+        p2: "Bank routes should only be treated as reference guidance and cannot fully replace real gameplay judgment. In practice, the result still depends on spin, power, and cue control.",
+        p3: "Some games use more detailed physics engines, where the rebound is affected not only by the incoming angle but also by the cue-ball separation angle.",
+        p4: "In those cases, power and spin must be adjusted dynamically instead of following the line mechanically."
       },
       item4: {
-        q: "Do I have to follow the power suggestion exactly?",
-        a: "No. Power suggestions are meant to build feel. Different tables, cloth speed, and player stroke styles will change the actual result."
+        q: "Why does the assistant suddenly crash while running?",
+        p1: "In most cases, this happens because the phone has limited performance and too many apps are running in the background. When system load becomes too high, Android may kill background apps automatically, including the assistant.",
+        p2: "Try clearing memory, closing unnecessary background apps, and changing the app's battery setting to unrestricted."
       },
       item5: {
-        q: "What should I do if the app feels slow?",
-        a: "Close background apps, reduce the amount of on-screen assistance, or switch to simple mode. Older devices should prioritize basic features."
-      },
-      item6: {
-        q: "Do I need to recalibrate every time?",
-        a: "Not if the device position, angle, and environment stay the same. Recalibration is recommended whenever anything clearly moves."
-      }
-    },
-    media: {
-      kicker: "Visual Content",
-      title: "How to place images and GIFs",
-      intro: "When you upload assets to GitHub, you can simply replace the matching filenames inside the assets folder.",
-      hero: {
-        alt: "Billiards assistant demo screen",
-        fallback: "Place your demo GIF at assets/hero-demo.gif",
-        caption: "Use this hero slot for a main UI screenshot or a short 6-10 second looping demo GIF."
-      },
-      aiming: {
-        alt: "Real-time aiming assistance example",
-        fallback: "Place your aiming GIF at assets/feature-aiming.gif",
-        caption: "A short animation showing how the aiming line appears works well here."
-      },
-      calibration: {
-        alt: "Calibration and path prediction example",
-        fallback: "Place your calibration or prediction GIF at assets/feature-calibration.gif",
-        caption: "A calibration screen or route prediction screenshot fits this section well."
-      },
-      training: {
-        alt: "Training records and simple mode example",
-        fallback: "Place your training screenshot at assets/feature-training.gif",
-        caption: "Use this for training stats or the simplified UI."
-      },
-      card1: {
-        title: "Hero visual",
-        text: "Use a 16:10 or 16:9 product visual, or a short 6-10 second looping GIF, and store it as assets/hero-demo.gif."
-      },
-      card2: {
-        title: "Feature visuals",
-        text: "Each core feature should ideally have at least one image, especially for guide lines, before/after states, and calibration screens."
-      },
-      card3: {
-        title: "FAQ screenshots",
-        text: "If you have common error states, failed detection examples, or permission prompts, adding screenshots below the FAQ helps self-service troubleshooting."
-      }
-    },
-    deploy: {
-      kicker: "Deploy Tips",
-      title: "Recommended structure for GitHub deployment",
-      card1: {
-        title: "Keep the file structure simple",
-        text: "Place index.html, styles.css, script.js, and assets/ at the same level for the easiest GitHub Pages deployment."
-      },
-      card2: {
-        title: "Store all visuals in assets/",
-        text: "Keep JPG, PNG, WEBP, and GIF files inside assets/ so the page stays easy to maintain."
-      },
-      card3: {
-        title: "Extend the help center later",
-        text: "You can add release notes, download instructions, contact info, and version comparisons as the next step."
+        q: "Why does the guide line flicker or shake?",
+        p1: "This usually means the phone's CPU performance is not strong enough for stable real-time recognition and line rendering.",
+        p2: "A better-performing device is recommended, ideally running Android 15 or above. Also try reducing background activity so more resources remain available for the assistant."
       }
     }
   }
@@ -448,10 +408,15 @@ function setSearchStatus(keyword, count) {
 }
 
 function ensureNoResultsNode() {
+  const mainContent = document.querySelector(".main-content");
+  if (!mainContent) {
+    return;
+  }
+
   if (!noResultsNode) {
     noResultsNode = document.createElement("div");
     noResultsNode.className = "no-results hidden-by-search";
-    document.querySelector(".main-content").appendChild(noResultsNode);
+    mainContent.appendChild(noResultsNode);
   }
 
   noResultsNode.textContent = getMessage("search.noResults");
@@ -486,11 +451,17 @@ function applyTranslations() {
     button.classList.toggle("active", button.dataset.lang === currentLanguage);
   });
 
-  ensureNoResultsNode();
-  applySearch(searchInput.value);
+  if (searchInput) {
+    ensureNoResultsNode();
+    applySearch(searchInput.value);
+  }
 }
 
 function applySearch(keyword) {
+  if (!searchInput) {
+    return;
+  }
+
   const normalized = keyword.trim().toLowerCase();
   let matchCount = 0;
 
@@ -567,26 +538,32 @@ function wireMediaFallbacks() {
   });
 }
 
-searchInput.addEventListener("input", (event) => {
-  applySearch(event.target.value);
-});
-
-clearButton.addEventListener("click", () => {
-  searchInput.value = "";
-  applySearch("");
-  searchInput.focus();
-});
-
-tagButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const keyword = currentLanguage === "zh"
-      ? button.dataset.keywordZh || ""
-      : button.dataset.keywordEn || "";
-
-    searchInput.value = keyword;
-    applySearch(keyword);
+if (searchInput) {
+  searchInput.addEventListener("input", (event) => {
+    applySearch(event.target.value);
   });
-});
+}
+
+if (clearButton && searchInput) {
+  clearButton.addEventListener("click", () => {
+    searchInput.value = "";
+    applySearch("");
+    searchInput.focus();
+  });
+}
+
+if (searchInput) {
+  tagButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const keyword = currentLanguage === "zh"
+        ? button.dataset.keywordZh || ""
+        : button.dataset.keywordEn || "";
+
+      searchInput.value = keyword;
+      applySearch(keyword);
+    });
+  });
+}
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {

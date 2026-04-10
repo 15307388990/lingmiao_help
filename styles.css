@@ -519,7 +519,14 @@ h2 {
   gap: 16px;
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .step-card,
+.info-card,
 .support-card,
 .media-guide-card,
 .notice-card {
@@ -550,6 +557,10 @@ h2 {
   gap: 16px;
 }
 
+.feature-card-grid {
+  margin-bottom: 18px;
+}
+
 .feature-showcase {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
@@ -573,6 +584,66 @@ h2 {
 .notice-hero-copy p {
   margin: 10px 0 0;
   color: var(--muted);
+}
+
+.notice-copy {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.notice-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.step-media {
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.step-media img {
+  width: 100%;
+  border: 1px solid rgba(20, 56, 39, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(11, 26, 19, 0.1);
+}
+
+.step-media figcaption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.feature-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature-shot {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.42));
+}
+
+.feature-shot img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 56, 39, 0.08);
+  box-shadow: 0 12px 30px rgba(11, 26, 19, 0.08);
+}
+
+.feature-shot figcaption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
 .bullet-list {
@@ -639,15 +710,15 @@ h2 {
   content: "−";
 }
 
-.faq-item p {
-  margin: 6px 0 0;
-  color: var(--muted);
+.faq-answer {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
 }
 
-.support-box {
-  background:
-    radial-gradient(circle at top right, rgba(212, 165, 69, 0.14), transparent 26%),
-    var(--panel);
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .hidden-by-search {
@@ -685,9 +756,11 @@ h2 {
   }
 
   .steps-grid,
+  .card-grid,
   .notice-list,
   .support-grid,
-  .media-guide-grid {
+  .media-guide-grid,
+  .feature-shot-grid {
     grid-template-columns: 1fr;
   }
 
